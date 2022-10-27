@@ -4,7 +4,6 @@ public class Departament {
 	public String name;
 
 	public Departament() {
-		
 	}
 	public Departament(String name) {
 		this.name = name;
@@ -15,6 +14,5 @@ public class Departament {
 	public String getName() {
 		return name;
 	}
-	
 }
 

@@ -38,7 +38,7 @@ public class Program {
 
 		for(int contador = 1; contador <= totallyContracts; contador++)
 		{
-			System.out.print("Enter contract #" + contador + " data:\nDaet (DD/MM/YYYY): ");
+			System.out.print("Enter contract #" + contador + "date:\nDate (DD/MM/YYYY): ");
 			Date date = formatter.parse(sc.next());
 			
 			System.out.print("Value per hour: ");
@@ -49,7 +49,6 @@ public class Program {
 			
 			HourContract contract = new HourContract(date, valuePerHour, durationHour);
 			worker.addContract(contract);
-			contract.totalValue();
 		}
 		
 		System.out.print("Enter month and year to calculate income (MM/YYYY):");
@@ -57,8 +56,7 @@ public class Program {
 		int month = Integer.parseInt(dateRequired.substring(0,2));
 		int year = Integer.parseInt(dateRequired.substring(3));;
 		
-		System.out.println("Name: " + worker.getName() + "\nDepartament: " + worker.getLevel() + "\nIncome for " + month + "/" + year + ": " + String.format("%.2f", worker.income(year, month)));
-		
+		System.out.println("Name: " + worker.getName() + "\nDepartament: " + worker.getDepartament().getName() + "\nIncome for " + month + "/" + year + ": " + String.format("%.2f", worker.income(year, month)));
 		
 		sc.close();
 	}
