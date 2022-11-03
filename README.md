@@ -1,1 +1,1 @@
-Activities pertenced in the course Java.
+Activities done in the course Java.
